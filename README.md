@@ -153,3 +153,80 @@ Validation for Qunatity. It will allow in value like 3.0, 3 , 30, 31.0 it will n
         print("Valid Quantity")
     }
 ```
+**Valid Price**
+
+Validation for Price Value. It will allow only Numeric Value with and withour decimal numbers like 33.4,33.0,33 etc..
+
+```swift  
+    let strPrice : String = "23a.33a"
+    let strPrice1 : String = "37.30"
+    if(!strPrice.validationforPrice()) {
+        print("InValid Price")
+    }
+    if(strPrice1.validationforPrice()) {
+        print("Valid Price")
+    }
+```
+**Valid SKU Number**
+
+Validation for SKU Number.
+
+```swift  
+    let strSKU : String = "123456789"
+    let strSKU1 : String = "1234567"
+    if(!strSKU.validationforSKUNumber()) {
+        print("InValid SKU")
+    }
+    if(strSKU1.validationforSKUNumber()) {
+        print("Valid SKU")
+    }
+```
+**Valid OrderNotes**
+
+Validation for Order Notes. This is notes It will allow Upto 2000 char includes alpha numeric value
+
+```swift  
+    let strOrderNotes : String = "This is notes It will allow Upto 2000 char includes alpha numeric value"
+    if(strOrderNotes.validationforOrderNotes()) {
+        print("Valid Order Notes")
+    }
+```
+**Valid OrderNotes**
+
+Validation for Order Notes. This is notes It will allow Upto 2000 char includes alpha numeric value
+
+```swift  
+    let strOrderNotes : String = "This is notes It will allow Upto 2000 char includes alpha numeric value"
+    if(strOrderNotes.validationforOrderNotes()) {
+        print("Valid Order Notes")
+    }
+```
+**Valid Credit Card Number**
+
+Validation for Credit Card Number. Validate Number as per Card Name "American Express" = 15 Digit Card Number, "Visa" & "Master Card" = 16 Digit Card Number. 
+
+```swift  
+        let strCreditCard : String = "1234567812345"
+        let strCreditCard1 : String = "1234567123456789"
+        if(!strCreditCard.validationforCreditCardNumber(cardName: "Visa")) {
+            print("InValid Credit Card")
+        }
+        if(strCreditCard1.validationforCreditCardNumber(cardName: "Visa")) {
+            print("Valid Credit Card")
+        }
+```
+**Valid CVV Number**
+
+Validation for CVV Number. Validate Number as per Card Name "American Express" = 4 Digit CVV Number, "Visa" & "Master Card" = 3 Digit CVV Number. 
+
+```swift  
+    let strCVV : String = "444"
+    let strCVV1 : String = "4441"
+    if(!strCVV.validationforCVVNo(cardName: "American Express")) {
+        print("InValid CVV")
+    }
+    if(strCVV1.validationforCVVNo(cardName: "American Express")) {
+        print("Valid CVV")
+    }
+```
+        
