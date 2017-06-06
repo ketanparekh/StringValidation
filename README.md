@@ -103,3 +103,53 @@ Validation for Alpha numeric Zipcode value Minimum 1 Character Maximum 12 numeri
         print("Valid Aplpha numeric Zipcode")
     }
 ```
+**Valid Numeric Only Zipcode with fix length**
+
+Validation for numeric only Zipcode with fix length of 5 and 4 Numeric. 
+
+```swift 
+    let strZipcode : String = "380"
+    let strZipcode1 : String = "38004"
+    if(!strZipcode.validationforZipCode()) {
+        print("InValid Zipcode")
+    }
+    if(strZipcode1.validationforZipCode()) {
+        print("Valid Zipcode")
+    }
+
+    let strZipcode2 : String = "3800"
+    if(!strZipcode.validationforZip4()) {
+        print("InValid Zipcode with 4 Number")
+    }
+    if(strZipcode2.validationforZip4()) {
+        print("Valid Zipcode with 4 Number")
+    }
+```
+**Valid Only Alphabetic**
+
+Validation for Only Alphabetic value. Minimum 1 Character Maximum 100 Alphabetic. 
+
+```swift 
+    let strAlphabetic : String = "380"
+    let strAlphabetic1 : String = "abcABC"
+    if(!strAlphabetic.validationforAlphabeticValues()) {
+        print("InValid Alphabetic")
+    }
+    if(strAlphabetic1.validationforAlphabeticValues()) {
+        print("Valid Alphabetic")
+    }
+```        
+**Valid Qunatity**
+
+Validation for Qunatity. It will allow in value like 3.0, 3 , 30, 31.0 it will not allow numbers like 32.2, 3.2, e.g 
+
+```swift         
+    let strQuanity : String = "3.8"
+    let strQuanity1 : String = "3.0"
+    if(!strQuanity.validationforQunatity()) {
+        print("InValid Quantity")
+    }
+    if(strQuanity1.validationforQunatity()) {
+        print("Valid Quantity")
+    }
+```
