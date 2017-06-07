@@ -9,12 +9,6 @@ import Foundation
 
 extension String
 {
-    func isEmail() -> Bool
-    {
-        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
-        return NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluate(with: self)
-    }
-    
     func validationforEmail () -> Bool {
         let emailRegex: String = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
         let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegex)
@@ -35,7 +29,7 @@ extension String
     }
     
     func validationforUserName() -> Bool {
-        let validationstmt: String = "[a-zA-Z0-9 //$//.//,//!//?//#//@//+//>//<//}//{//)//(//&//^//*//~//`//^//|\\-\\://_//%//'\\]\\[\"\\\\]{3,25}"
+        let validationstmt: String = "[a-zA-Z0-9 //$//.//,//!//?//#//@//+//>//<//}//{//)//(//&//^//*//~//`//^//|\\-\\://_//%//'\\]\\[\"\\\\]{5,25}"
         let stmtTest = NSPredicate(format: "SELF MATCHES %@", validationstmt)
         if (!stmtTest.evaluate(with: self)) {
             return false
@@ -133,7 +127,7 @@ extension String
         }
         return true
     }
-    func validationforAddressBillingLine1() -> Bool {
+    func validationforAddressBillingLine() -> Bool {
         let validationstmt: String = "[a-zA-Z0-9 //$//.//,//!//?//#//@//+//>//<//}//{//)//(//&//^//*//~//`//^//|\\-\\://_//%//'\\]\\[\"\\\\]{1,100}"
         let stmtTest = NSPredicate(format: "SELF MATCHES %@", validationstmt)
         if (!stmtTest.evaluate(with: self)) {
